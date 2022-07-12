@@ -15,12 +15,14 @@ body {
 #root {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 body,
 input,
 textarea,
 select {
+    color: #303030;
     font-family: "Noto Serif KR", serif;
     font-size: 1rem;
 }

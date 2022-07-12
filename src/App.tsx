@@ -1,19 +1,19 @@
-import { Fragment } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Header from "./components/Header";
-
 import Home from "./routes/Home";
+import Profile from "./routes/Profile";
+import Projects from "./routes/Projects";
+import Contact from "./routes/Contact";
 
 const App = () => (
-    <Fragment>
-        <Header />
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
-            <Routes>
-                <Route path="/" element={<Home />} />
-            </Routes>
-        </BrowserRouter>
-    </Fragment>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
+        </Routes>
+    </BrowserRouter>
 );
 
 export default App;
